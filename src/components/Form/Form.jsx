@@ -12,6 +12,7 @@ export const Form = () => {
       alert(`${name} is already is contacts`);
       return;
     }
+    console.log(number);
     dispatch(addContact({ name, number }));
     action.resetForm();
   };

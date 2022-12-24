@@ -27,12 +27,12 @@ export const Users = () => {
         {isLoading && <h3>Loading....</h3>}
         {error && <h3>{error}</h3>}
         {contacts.length !== 0
-          ? contacts.map(({ id, name, number }) => (
-              <User key={id}>
+          ? contacts.map(({ _id, name, number }) => (
+              <User key={_id}>
                 {name}: {number}
                 <DeleteBtn
                   type="button"
-                  onClick={() => dispatch(deleteContact(id))}
+                  onClick={() => dispatch(deleteContact(_id))}
                 >
                   Delete
                 </DeleteBtn>
